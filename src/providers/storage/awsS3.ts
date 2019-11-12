@@ -74,10 +74,11 @@ export class AwsS3 implements IStorageProvider {
      * @param blobName - Name of blob in container
      */
     public async readText(blobName: string): Promise<string> {
-        const blockBlobURL = this.getBlockBlobURL(blobName);
-        const downloadResponse = await blockBlobURL.download(Aborter.none, 0);
+        // const blockBlobURL = this.getBlockBlobURL(blobName);
+        // const downloadResponse = await blockBlobURL.download(Aborter.none, 0);
 
-        return await this.bodyToString(downloadResponse);
+        // return await this.bodyToString(downloadResponse);
+        throw new Error('readText not implemented in AwsS3 provider');
     }
 
     /**
@@ -207,7 +208,8 @@ export class AwsS3 implements IStorageProvider {
      * @returns - S3 Connection
      */
     public getAccountUrl(): string {
-        return `https://${this.options.accountName}.blob.core.windows.net` + (this.options.sas || "");
+        // return `https://${this.options.accountName}.blob.core.windows.net` + (this.options.sas || "");
+        throw new Error('getAccountUrl not implemented in AwsS3 provider');
     }
 
     /**
@@ -226,7 +228,7 @@ export class AwsS3 implements IStorageProvider {
         return this.S3Connection;
     }
 
-    private getContainerURL(serviceURL?: ServiceURL, containerName?: string): ContainerURL {
+    private getContainerURL(serviceURL?: any /* ServiceURL */, containerName?: string): any /* ContainerURL */ {
         // return ContainerURL.fromServiceURL(
         //     (serviceURL) ? serviceURL : this.getServiceURL(),
         //     (containerName) ? containerName : this.options.containerName,
@@ -234,7 +236,7 @@ export class AwsS3 implements IStorageProvider {
         throw new Error('getContainerURL not implemented for AwsS3 provider');
     }
 
-    private getBlockBlobURL(blobName: string): BlockBlobURL {
+    private getBlockBlobURL(blobName: string): any /* BlockBlobURL */{
         // const containerURL = this.getContainerURL();
         // return BlockBlobURL.fromContainerURL(
         //     containerURL,
