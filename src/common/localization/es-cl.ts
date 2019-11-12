@@ -194,6 +194,34 @@ export const spanish: IAppStrings = {
                     description: "Crea el contenedor de blobs si aún no existe",
                 },
             },
+            awsS3: {
+                title: "AWS S3",
+                description: "",
+                accessKeyId: {
+                    title: "API Access Key",
+                    description: "",
+                },
+                secretAccessKey: {
+                    title: "API Secret Key",
+                    description: "",
+                },
+                bucket: {
+                    title: "Bucket",
+                    description: "",
+                },
+                folder: {
+                    title: "Folder",
+                    description: ""
+                },
+                region: {
+                    title: "AWS Region",
+                    description: ""
+                },
+                apiVersion: {
+                    title: "AWS API version (default latest)",
+                    description: ""
+                }
+            },
             bing: {
                 title: "Búsqueda de Imágenes Bing",
                 options: "Opciones de Búsqueda de Imágenes Bing",

@@ -191,6 +191,34 @@ export interface IAppStrings {
                     description: string,
                 }
             },
+            awsS3: {
+                title: string;
+                description: string,
+                accessKeyId: {
+                    title: string,
+                    description: string,
+                },
+                secretAccessKey: {
+                    title: string,
+                    description: string,
+                },
+                bucket: {
+                    title: string,
+                    description: string,
+                },
+                folder: {
+                    title: string,
+                    description: string,
+                },
+                region: {
+                    title: string,
+                    description: string,
+                },
+                apiVersion: {
+                    title: string,
+                    description: string,
+                }
+            }
             bing: {
                 title: string;
                 options: string;

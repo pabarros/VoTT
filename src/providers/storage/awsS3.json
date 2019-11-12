@@ -1,0 +1,38 @@
+{
+    "title": "${strings.connections.providers.awsS3.title}",
+    "description": "${strings.connections.providers.awsS3.description}",
+    "required": [
+        "accessKeyId",
+        "secretAccessKey",
+        "bucket",
+        "folder",
+        "region"
+    ],
+    "type": "object",
+    "properties": {
+        "accessKeyId": {
+            "title": "${strings.connections.providers.awsS3.accessKeyId.title}",
+            "type": "string"
+        },
+        "secretAccessKey": {
+            "title": "${strings.connections.providers.awsS3.secretAccessKey.title}",
+            "type": "string"
+        },
+        "bucket": {
+            "title": "${strings.connections.providers.awsS3.bucket.title}",
+            "type": "string"
+        },
+        "folder": {
+            "title": "${strings.connections.providers.awsS3.folder.title}",
+            "type": "string"
+        },
+        "region": {
+            "title": "${strings.connections.providers.awsS3.region.title}",
+            "type": "string"
+        },
+        "apiVersion": {
+            "title": "${strings.connections.providers.awsS3.apiVersion.title}",
+            "type": "string"
+        }
+    }
+}

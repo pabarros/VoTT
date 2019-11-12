@@ -192,6 +192,34 @@ export const english: IAppStrings = {
                     description: "Creates the blob container if it does not already exist",
                 },
             },
+            awsS3: {
+                title: "AWS S3",
+                description: "",
+                accessKeyId: {
+                    title: "API Access Key",
+                    description: "",
+                },
+                secretAccessKey: {
+                    title: "API Secret Key",
+                    description: "",
+                },
+                bucket: {
+                    title: "Bucket",
+                    description: "",
+                },
+                folder: {
+                    title: "Folder",
+                    description: ""
+                },
+                region: {
+                    title: "AWS Region",
+                    description: ""
+                },
+                apiVersion: {
+                    title: "AWS API version (default latest)",
+                    description: ""
+                }
+            },
             bing: {
                 title: "Bing Image Search",
                 options: "Bing Image Search Options",

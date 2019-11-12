@@ -5,6 +5,7 @@ import { VottJsonExportProvider } from "./providers/export/vottJson";
 import { CsvExportProvider } from "./providers/export/csv";
 import { AssetProviderFactory } from "./providers/storage/assetProviderFactory";
 import { AzureBlobStorage } from "./providers/storage/azureBlobStorage";
+import { AwsS3 } from "./providers/storage/awsS3";
 import { BingImageSearch } from "./providers/storage/bingImageSearch";
 import { LocalFileSystemProxy } from "./providers/storage/localFileSystemProxy";
 import { StorageProviderFactory } from "./providers/storage/storageProviderFactory";
@@ -30,6 +31,11 @@ export default function registerProviders() {
         displayName: strings.connections.providers.azureBlob.title,
         factory: (options) => new AzureBlobStorage(options),
     });
+    StorageProviderFactory.register({
+        name: "awsS3",
+        displayName: strings.connections.providers.awsS3.title,
+        factory: (options) => new AwsS3(options),
+    });
 
     // Asset Providers
     AssetProviderFactory.register({
@@ -42,6 +48,11 @@ export default function registerProviders() {
         name: "azureBlobStorage",
         displayName: strings.connections.providers.azureBlob.title,
         factory: (options) => new AzureBlobStorage(options),
+    });
+    AssetProviderFactory.register({
+        name: "awsS3",
+        displayName: strings.connections.providers.awsS3.title,
+        factory: (options) => new AwsS3(options),
     });
     AssetProviderFactory.register({
         name: "bingImageSearch",
